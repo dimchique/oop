@@ -11,7 +11,7 @@ clear:
 # Скомпилировать main.cpp
 .PHONY: compile-main
 compile-main:
-	docker-compose run --rm gcc-cmake g++ main.cpp -o ./build/main
+	docker-compose run --rm gcc-cmake bash -c "mkdir ./build && g++ main.cpp -o ./build/main"
 
 # Запустить точку входа main.cpp
 .PHONY: run-main
