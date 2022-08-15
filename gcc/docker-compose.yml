@@ -6,4 +6,4 @@ services:
     container_name: gcc-cmake-container
     tty: true
     volumes:
-      - .:/code
+      - ${CODE_DIR:-.}:/code
