@@ -1,0 +1,24 @@
+# Собрать проект с помощью CMakeLists.txt
+.PHONY: build
+build:
+	docker-compose run --rm gcc-cmake bash -c "cmake -S . -B build && make -C build"
+
+# Удалить директорию build
+.PHONY: clear
+clear:
+	docker-compose run --rm gcc-cmake rm -rf /code/build
+
+# Скомпилировать main.cpp
+.PHONY: compile-main
+compile-main:
+	docker-compose run --rm gcc-cmake g++ main.cpp -o ./build/main
+
+# Запустить точку входа main.cpp
+.PHONY: run-main
+run-main:
+	docker-compose run --rm gcc-cmake ./build/main
+
+# Запустить точку входа tests.cpp
+.PHONY: run-tests
+run-tests:
+	docker-compose run --rm gcc-cmake ./build/tests

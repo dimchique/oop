@@ -1,1 +1,5 @@
 *.DS_Store
+gcc/*
+!gcc/docker-compose.yml
+!gcc/Dockerfile
+!gcc/Makefile
