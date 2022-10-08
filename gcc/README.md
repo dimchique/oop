@@ -40,5 +40,5 @@ CODE_DIR=/Users/my-user/Desktop/my-project make -C /Users/my-user/Desktop/oop/gc
 
 ---
 
-> `CODE_DIR` – путь до папки с проектом\
-> `-C <path>` – путь до файла `Makefile`
+> `CODE_DIR` – директория, в которой находятся исходники проекта\
+> `-C <path>` – директория, в которой находится `Makefile`
