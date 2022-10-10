@@ -1,6 +1,13 @@
-# Сборка, запуск и тестирование проекта
+# Сборка и запуск проекта
 
-Сборка проекта, исходники которого находятся в `CODE_DIR`:
+Ссылка на скачивание докера <https://www.docker.com/products/docker-desktop>
+
+`CODE_DIR` – директория, в которой находятся исходники проекта\
+`-C <path>` – директория, в которой находится `Makefile`
+
+## Команды
+
+Собрать проект, исходники которого находятся в `CODE_DIR`:
 
 ```bash
 CODE_DIR=/Users/my-user/Desktop/my-project make -C /Users/my-user/Desktop/oop/gcc build
@@ -8,7 +15,7 @@ CODE_DIR=/Users/my-user/Desktop/my-project make -C /Users/my-user/Desktop/oop/gc
 
 ---
 
-Компиляция `main.cpp`, который находится в `CODE_DIR`:
+Скомпилировать `main.cpp`, который находится в `CODE_DIR`:
 
 ```bash
 CODE_DIR=/Users/my-user/Desktop/my-project make -C /Users/my-user/Desktop/oop/gcc compile-main
@@ -24,7 +31,7 @@ CODE_DIR=/Users/my-user/Desktop/my-project make -C /Users/my-user/Desktop/oop/gc
 
 ---
 
-Запуск программы:
+Запустить скомпилированную точку входа `main.cpp`:
 
 ```bash
 CODE_DIR=/Users/my-user/Desktop/my-project make -C /Users/my-user/Desktop/oop/gcc run-main
@@ -32,13 +39,8 @@ CODE_DIR=/Users/my-user/Desktop/my-project make -C /Users/my-user/Desktop/oop/gc
 
 ---
 
-Запуск тестов:
+Запустить скомпилированную точку входа `tests.cpp`:
 
 ```bash
 CODE_DIR=/Users/my-user/Desktop/my-project make -C /Users/my-user/Desktop/oop/gcc run-tests
 ```
-
----
-
-> `CODE_DIR` – директория, в которой находятся исходники проекта\
-> `-C <path>` – директория, в которой находится `Makefile`
