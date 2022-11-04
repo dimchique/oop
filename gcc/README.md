@@ -13,6 +13,14 @@
 CODE_DIR=/Users/my-user/Desktop/my-project make -C /Users/my-user/Desktop/oop/gcc build
 ```
 
+или, если не установлен `make`, то
+
+```bash
+CODE_DIR=/Users/my-user/Desktop/my-project docker-compose run --rm gcc-cmake bash -c "cmake -S . -B build && make -C build"
+```
+
+(команда после `CODE_DIR=<path>` взята из `Makefile`)
+
 ---
 
 Скомпилировать `main.cpp`, который находится в `CODE_DIR`:
